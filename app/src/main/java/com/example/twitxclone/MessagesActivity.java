@@ -13,6 +13,7 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 import com.example.twitxclone.model.Message;
+import com.google.firebase.Firebase;
 
 import java.util.ArrayList;
 import java.util.GregorianCalendar;
@@ -25,7 +26,9 @@ public class MessagesActivity extends AppCompatActivity {
 
     EditText messageField;
     TextView userTextView;
+    TextView dobTextView;
     ListView listView;
+    Firebase database;
 
     public void submitMessage(View view) {
         String message = messageField.getText().toString();
